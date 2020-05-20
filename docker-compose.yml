@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+      sqlos:
+        image: mysql:5.7
+        volumes:
+            - mysql_storage:/var/lib/mysql
+        restart: always
+        environment:
+          MYSQL_ROOT_PASSWORD: onkar27
+          MYSQL_USER: onkar
+          MYSQL_PASSWORD: onkar27
+          MYSQL_DATABASE: onkardb
+
+      joomlaos:
+        image: joomla:latest
+        volumes: 
+             - joomla_storage:/var/www/html
+        restart: always
+        depends_on:
+             - sqlos
+        ports:
+             - 8087:80
+        environment: 
+             JOOMLA_DB_HOST: sqlos
+             JOOMLA_DB_USER: onkar
+             JOOMLA_DB_PASSWORD: onkar27
+             JOOMLA_DB_NAME: onkardb
+
+volumes:
+        joomla_storage:
+        mysql_storage:       
