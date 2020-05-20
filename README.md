@@ -56,6 +56,24 @@ Containers :
 
 Image :
 
+           Specify the image we want to use.
+
+Restart :
+
+            By chance any of the container stops, docker-compose will restart it again.
+
+Volumes :
+
+            All our data will be permanent if we mount a volume to the folders where NextCloud and MySQL stores data. The data will remain permanent if any of the container terminates. For that you have to create volumes first.
+
+Depends_on :
+
+             NextCloud uses database server. We have to specify which database container it should depend on.
+
+Ports :
+              
+              To expose our container to outside world by using PAT.
+
 
 # Running Joomla WebApp:
 Open the browser and type localhost:80 or localhost in the address bar and you will be able to see your Joomla WebApp. Note: If you want to use any other port then you have to mention it in your docker-compose file.
