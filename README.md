@@ -40,8 +40,11 @@ Install a docker-compose software from https://docs.docker.com/compose/install. 
  
            vim docker-compose.yml
            
-  The file name should always be docker-compose.yml.
+  The file name should always be docker-compose.yml.This is my .yml file.
   
+  
+ ![docker-2-yml-file.PNG](https://github.com/onkar2701/docker_project_joomla/blob/master/docker-2-yml%20file.PNG)
+ 
 Version :
          
          Each version has different syntax. This version supports docker-compose fine.
